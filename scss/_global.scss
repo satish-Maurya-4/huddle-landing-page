@@ -1,0 +1,37 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+}
+
+main > * {
+    display: grid;
+    justify-items: center;
+    padding: 2rem 0;
+}
+
+.btn {
+    border-radius: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    box-shadow: 0 0 transparent, 0 0 transparent,
+      0 10px 10px -8px rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow__box{	
+    border-radius: .75rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  }
+
+  a{
+      text-decoration: none;
+      color: #fff;
+  }
+

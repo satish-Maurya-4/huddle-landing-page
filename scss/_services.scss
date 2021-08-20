@@ -1,0 +1,50 @@
+.services{
+    padding: 4rem 0;
+    text-align: center;
+
+    &__container{
+        width: 91.66%;
+        // border: 1px solid;
+        display: grid;
+        grid-row-gap: 2.5rem;
+grid-auto-rows: minmax(0, 1fr);
+grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.service{
+    @include transition;
+    display: grid;
+    grid-row-gap: 3rem;
+    row-gap: 3rem;
+    justify-items: center;
+    padding: 3rem 2rem;
+
+    &__desc{
+        display: grid;
+        grid-auto-rows: -webkit-min-content;
+        grid-auto-rows: min-content;
+        justify-items: center;
+        grid-row-gap: 0.5rem;
+        grid-gap: 0.5rem;
+    }
+
+    &__draw{
+        width: 100%;    }
+    &__heading{
+        @include h-font;
+        width: max-content;
+    }
+    &__summary{
+        @include c-font;
+        width: 83.333333%;
+        max-width: 24rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #808d99;
+    }
+}
+
+.service:hover{
+    box-shadow: none;
+}

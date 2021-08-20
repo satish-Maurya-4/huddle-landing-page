@@ -1,0 +1,36 @@
+.cta {
+    background: linear-gradient(0deg, #00252e 0, #00252e 50%, transparent 0);
+  &__container {
+    @include transition;
+    max-width: 480px;
+    width: 91.66%;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    display: grid;
+    background: #fff;
+  }
+  &__container:hover{
+    box-shadow: none;
+  }
+  &__heading {
+    @include h-font;
+    @include t-c;
+    font-size: 1rem;
+  }
+  &__btn {
+    @include c-font;
+    @include transition;
+    text-decoration: none;
+    background: $pink-clr;
+    justify-self: center;
+    padding: 0.6rem 2rem;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 1rem 3.5rem;
+    border-radius: 9999px;
+    margin-top: 1rem;
+  }
+  &__btn:hover{
+    opacity: 0.8;
+  }
+}

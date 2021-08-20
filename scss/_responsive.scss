@@ -1,0 +1,274 @@
+/* 480px screen */
+
+@include xs-screen{
+    .header{
+        &__content{
+            &--desc{
+                max-width: 28rem;
+            }
+        }
+
+        &__nav--btn{
+            font-size: 0.75rem;
+            padding: 0.5rem 2rem;
+            line-height: 1rem;
+        }
+        &__container{
+            max-width: 640px;
+        }
+    }
+
+    .services{
+        &__container{
+            max-width: 640px;
+        }
+    }
+
+    .service{
+        &__desc{
+            max-width: 480px;
+        }
+        &__draw{
+            max-width: 20rem;
+        }
+    }
+
+    .footer{
+        &__container{
+            grid-row-gap: 2.5rem;
+            row-gap: 2.5rem;
+            justify-items: center;
+        }
+        &__content{
+            width: 100%;
+            grid-row-gap: 5rem;
+            row-gap: 5rem;
+            justify-items: center !important;
+        }
+        &__nav{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+            grid-template-rows: repeat(3, max-content);
+            grid-column-gap: 3rem;
+            justify-items: start;
+            justify-self: center;
+        }
+    }
+    .contacts{
+        max-width: 450px;
+    }
+}
+
+/* 640px screen */
+
+@include sm-screen{
+    .header{
+        &__content{
+            &--title{
+                max-width: 24rem;
+                font-size: 1.875rem;
+                line-height: 1.6;
+            }
+        }
+        &__nav--btn{
+            padding: 0.75rem 3rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    .service{
+        grid-row-gap: 2.5rem;
+        row-gap: 2.5rem;
+
+        &__desc{
+            max-width: 640px;
+            grid-row-gap: 1rem;
+            row-gap: 1rem;
+        }
+    }
+}
+
+/* 768px screen */
+
+@include md-screen{
+    h1{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    .header{
+        background-image: url("/images/bg-hero-desktop.svg"),
+                        url("/images/bg-hero-desktop.svg"),
+                        url("/images/bg-hero-mobile.svg"),
+                        url("/images/bg-hero-mobile.svg");
+        background-size: 200%;
+        background-position: right;
+        &__container{
+            max-width: 1280px;
+        }
+        &__content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            &--about{
+                text-align: left;
+            }
+            &--title{
+                max-width: 20rem;
+                font-size: 1.8rem;
+                line-height: 1.6;
+                // 
+            }
+            &--title, &--desc, &--btn{
+                justify-self: start;
+            }
+            &--btn{
+                font-size: 0.8rem;
+            }
+            &--img{
+                width: 50%;
+            }
+        }
+    }
+    .services{
+        text-align: left;
+
+        &__container{
+            width: 83.333333% !important;
+            max-width: 1200px;
+        }
+    }
+    .service{
+        align-items: center;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+        text-align: left;
+        &__draw{
+            width: 80% !important;
+            max-width: none;
+        }
+        &__desc{
+            justify-items: start !important;
+            max-width: none;
+        }
+    
+        &__summary{
+            width: 100% !important;
+            max-width: 28rem !important;
+            font-size: 0.9875rem !important;
+            line-height: 1.6!important;
+            
+        }
+    }
+    .service:nth-child(odd) .service__draw{
+        order: 2;
+    }
+
+    .service:nth-child(2n) .service__desc,
+    .service:nth-child(odd)  .service__draw{
+        margin-left: auto;
+    }
+    .service:nth-child(2n) .service__draw,
+    .service:nth-child(odd)  .service__desc{
+        margin-right: auto;
+    }
+
+    .cta{
+        &__heading{
+            font-size: 1.25rem !important;
+            line-height: 1.75rem;
+        }
+        &__btn{
+            font-size: 0.875rem !important;
+        }
+    }
+
+    .footer{
+        &__container{
+            max-width: 760px !important;
+        }
+        &__nav{
+            grid-column: 5/-1 !important;
+            max-width: none !important;
+            justify-self: end;
+            align-items: start !important;
+            &--item{
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                
+            }
+        }
+        &__logo{
+            justify-self: start;
+        }
+    }
+    .contacts{
+        grid-column: 1/5 !important;
+        justify-self: start;
+    }
+}
+
+/* 1024px screen */
+
+@include lg-screen{
+    .header{
+        &__content{
+            &--title{
+                max-width: 30rem;
+                font-size: 2.6rem;
+            }
+            &--desc{
+                font-size: 1.1rem;
+            }
+            &--btn{
+                font-size: 1rem;
+            }
+        }
+    }
+    .service{
+        padding-left: 6rem !important;
+    }
+    .footer{
+        &__container{
+            max-width: 1200px !important;
+        }
+        &__nav{
+            grid-column: span 2 !important;
+            width: 100%;
+        }
+        &__content{
+            grid-column-gap: 8rem;
+        }
+    }
+    .contacts{
+        max-width: 360px;
+        grid-column: span 3 !important;
+    }
+    .social__nav{
+        grid-column: span 1 !important;
+        align-self: start !important;
+        justify-self: end !important;
+        width: 100%;
+    }
+    .copyright{
+        justify-self: end !important;
+    }
+
+    .cta{
+        &__container{
+            max-width: 800px !important;
+            padding: 3.5rem 0 !important;
+            grid-row-gap: 1.5rem;
+        }
+        &__heading{
+            font-size: 2rem !important;
+        }
+        &__btn{
+            font-size: 1.2rem !important;
+        }
+    }
+
+}
+

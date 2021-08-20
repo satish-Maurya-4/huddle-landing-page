@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+// heading font
+
+@mixin h-font{
+    font-family: "Poppins", sans-serif;
+}
+
+// content font
+
+@mixin c-font{
+    font-family: "Open Sans", sans-serif;
+}
+
+// text-style
+
+@mixin t-c{
+    text-transform: capitalize;
+}
+
+@mixin l-h{
+    line-height: 1.6;
+}
+
+/* colors */
+
+/* primary */
+
+$pink-clr: hsl(322, 100%, 66%);
+
+/**** media queries ****/
+
+@mixin xs-screen{
+    @media screen and (min-width: 480px){
+        @content;
+    }
+}
+@mixin sm-screen{
+    @media screen and (min-width: 640px){
+        @content;
+    }
+}
+@mixin md-screen{
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+@mixin lg-screen{
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+
+/* transition and animation */
+
+@mixin transition{
+    transition: all 0.5s ease-in-out;
+}
