@@ -64,17 +64,20 @@
 }
 
 .footer__nav--item{
-    position: relative;
     padding: 0;
     margin: 0;
     @include t-c;
     @include c-font;
-    @include transition;
 }
-.footer__nav--item:hover::before{
+.footer__nav--item a{
+    @include transition;
+    position: relative;
+    display: inline-block !important;
+}
+.footer__nav--item a:hover::before{
     width: 100%;
 }
-.footer__nav--item::before{
+.footer__nav--item a::before{
     content: '';
     position: absolute;
     bottom: -2px;

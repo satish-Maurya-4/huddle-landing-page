@@ -98,7 +98,7 @@ a {
   line-height: 1.625;
   color: #000;
   display: block;
-  padding: 0 1.25rem;
+  padding: 0.4rem 1.25rem;
 }
 
 .header__nav--btn:hover {
@@ -612,20 +612,24 @@ a {
 }
 
 .footer__nav--item {
-  position: relative;
   padding: 0;
   margin: 0;
   text-transform: capitalize;
   font-family: "Open Sans", sans-serif;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
-.footer__nav--item:hover::before {
+.footer__nav--item a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  display: inline-block !important;
+}
+
+.footer__nav--item a:hover::before {
   width: 100%;
 }
 
-.footer__nav--item::before {
+.footer__nav--item a::before {
   content: '';
   position: absolute;
   bottom: -2px;
